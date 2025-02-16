@@ -1,0 +1,88 @@
+//import 'dart:html';
+
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatefulWidget {
+  const MyApp({super.key});
+
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  List<int> l0 = [1, 2, 3, 4, 5, 6, 7];
+  List<String> l1 = [
+    'mohan',
+    'krishnakant',
+    'vinay',
+    'deveraj',
+    'arjun',
+    'satyam',
+    'deepanshu'
+  ];
+  List<String> l2 = [
+    'hi',
+    'hello',
+    'how are you',
+    'kaha ho',
+    'hello arjun',
+    'monu',
+    'kab ana he'
+  ];
+  Color con_color = Colors.white;
+  Color h_color = Colors.blue;
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        backgroundColor: Colors.black12,
+        appBar: AppBar(
+          backgroundColor: Color(0xFF9b3dd3),
+          title: Text('T E S T'),
+          titleTextStyle: TextStyle(
+            fontSize: 25,
+            fontWeight: FontWeight.bold,
+            color: Color(0xFF44bd32),
+          ),
+          centerTitle: true,
+        ),
+        body: Center(
+          child: Container(
+            height: 300,
+            width: 300,
+            decoration: BoxDecoration(
+              color: Color(0xFF272727),
+              borderRadius: BorderRadius.circular(20),
+              border: Border.symmetric(
+                // vertical: BorderSide(
+                //     color: Colors.amber, style: BorderStyle.solid, width: 1,
+                // ),
+                  horizontal:const BorderSide(color: Colors.white,width: 1,),
+              ),
+              boxShadow: [
+                BoxShadow(
+                  blurRadius: 100,
+                  color: Colors.white38,
+                  spreadRadius: 10,
+                  blurStyle: BlurStyle.normal,
+                ),
+              ],
+            ),
+            child: Center(
+              child: Container(
+                height: 200,
+                width: 200,
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}

@@ -1,0 +1,131 @@
+//import 'dart:html';
+
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatefulWidget {
+  const MyApp({super.key});
+
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  Color con_color=Colors.white;
+  Color h_color=Colors.blue;
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          backgroundColor: Color(0xFF9b3dd3),
+          title: Text('T E S T'),
+          titleTextStyle: TextStyle(
+            fontSize: 25,
+            fontWeight: FontWeight.bold,
+            color: Color(0xFF44bd32),
+          ),
+          centerTitle: true,
+        ),
+        body:Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: SingleChildScrollView(
+            child: Column(
+              children: <Widget>[
+                Container(
+                  margin: EdgeInsets.only(bottom: 10),
+                  height: 300,
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: SingleChildScrollView(
+                      scrollDirection: Axis.horizontal,  // use this for direction of scrollview
+                      child: Row(
+                        children: [
+                          Container(
+                            width: 300,
+                            margin: EdgeInsets.only(right: 10.0),
+                            color: Color(0xFF192a56),
+                          ),
+                          Container(
+                            width: 300,
+                            margin: EdgeInsets.only(right: 10.0),
+                            color: Color(0xFF9c88ff),
+                          ),
+                          Container(
+                            width: 300,
+                            margin: EdgeInsets.only(right: 10.0),
+                            color: Color(0xFFfbc531),
+                          ),
+                          Container(
+                            width: 300,
+                            margin: EdgeInsets.only(right: 10.0),
+                            color: Color(0xFF4cd137),
+                          ),
+                          Container(
+                            width: 300,
+                            margin: EdgeInsets.only(right: 10.0),
+                            color: Color(0xFF487eb0),
+                          ),
+                          Container(
+                            width: 300,
+                            margin: EdgeInsets.only(right: 10.0),
+                            color: Color(0xFFe84118),
+                          ),
+                          Container(
+                            width: 300,
+                            margin: EdgeInsets.only(right: 10.0),
+                            color: Color(0xFF7f8fa6),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+                Container(
+                  margin: EdgeInsets.only(bottom: 10),
+                  height: 300,
+                  child: Image.asset('assets/images/WhatsApp Image 2023-08-10 at 17.57.14.jpg'),
+                ),
+                Container(
+                  margin: EdgeInsets.only(bottom: 10),
+                  height: 300,
+                  child: Image.asset('assets/images/images (1).jpeg'),
+                ),
+                Container(
+                  margin: EdgeInsets.only(bottom: 10),
+                  height: 300,
+                  child: Image.asset('assets/images/IMG20210831180853.jpg'),
+                ),
+                Container(
+                  margin: EdgeInsets.only(bottom: 10),
+                  height: 300,
+                  child: Image.asset('assets/images/location_background.jpg'),
+                ),
+                Container(
+                  margin: EdgeInsets.only(bottom: 10),
+                  height: 300,
+                  child: Image.asset('assets/images/photo-1562690868-60bbe7293e94.jpeg'),
+                ),
+                Container(
+                  margin: EdgeInsets.only(bottom: 10),
+                  height: 300,
+                  child: Image.asset('assets/images/photo-1496062031456-07b8f162a322.jpeg'),
+                ),
+                Container(
+                  margin: EdgeInsets.only(bottom: 10),
+                  height: 300,
+                  color: Color(0xFF718093),
+                ),
+
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}

@@ -1,0 +1,140 @@
+//import 'dart:html';
+
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatefulWidget {
+  const MyApp({super.key});
+
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  List<String> l1=['mohan','krishnakant','vinay','deveraj','arjun','satyam','deepanshu'];
+  List<String> l2=['hi','hello','how are you','kaha ho','hello arjun','monu','kab ana he'];
+  Color con_color=Colors.white;
+  Color h_color=Colors.blue;
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        backgroundColor: Colors.black12,
+        appBar: AppBar(
+          backgroundColor: Color(0xFF9b3dd3),
+          title: Text('T E S T'),
+          titleTextStyle: TextStyle(
+            fontSize: 25,
+            fontWeight: FontWeight.bold,
+            color: Color(0xFF44bd32),
+          ),
+          centerTitle: true,
+        ),
+        body:ListView(
+          children: [
+            ListTile(
+              leading: CircleAvatar(
+                foregroundImage: NetworkImage('https://www.vhv.rs/dpng/d/426-4263064_circle-avatar-png-picture-circle-avatar-image-png.png'),
+                backgroundColor: Colors.teal,
+                radius: 25,
+              ),
+              title: Text(l1[0],style: TextStyle(fontWeight: FontWeight.w600,color: Colors.white),),
+              subtitle: Text(l2[0],style: TextStyle(fontWeight: FontWeight.w400,color: Colors.white),),
+              trailing: IconButton(
+                  onPressed: (){},
+                  icon: Icon(Icons.add,color: Colors.white,),
+                iconSize: 20
+                ,
+              ),
+            ),
+            ListTile(
+
+              leading: CircleAvatar(
+                backgroundImage: NetworkImage('https://png.pngtree.com/background/20230613/original/pngtree-male-avatar-image-in-the-circle-picture-image_3377421.jpg'),
+                  radius: 25,
+                  onBackgroundImageError: (exception, stackTrace) {
+                    print('Failed to load image');
+                  }
+              ),
+              title: Text(l1[1],style: TextStyle(fontWeight: FontWeight.w600,color: Colors.white),),
+              subtitle: Text(l2[2],style: TextStyle(fontWeight: FontWeight.w400,color: Colors.white),),
+              trailing: IconButton(
+                onPressed: (){},
+                icon: Icon(Icons.add,color: Colors.white,),
+                iconSize: 20
+                ,
+              ),
+            ),
+            ListTile(
+              leading: CircleAvatar(
+                backgroundImage: NetworkImage('https://thefrisky.com/wp-content/uploads/2019/01/round-photo-1.png'),
+               // backgroundColor: Colors.teal,
+                radius: 25,
+              ),
+              title: Text(l1[2],style: TextStyle(fontWeight: FontWeight.w600,color: Colors.white),),
+              subtitle: Text(l2[2],style: TextStyle(fontWeight: FontWeight.w400,color: Colors.white),),
+              trailing: IconButton(
+                onPressed: (){},
+                icon: Icon(Icons.add,color: Colors.white,),
+                iconSize: 20
+                ,
+              ),
+            ),
+            ListTile(
+              leading: CircleAvatar(
+                backgroundImage: AssetImage('https://www.vhv.rs/dpng/d/426-4263064_circle-avatar-png-picture-circle-avatar-image-png.png'),
+                backgroundColor: Colors.teal,
+                radius: 25,
+              ),
+              title: Text(l1[3],style: TextStyle(fontWeight: FontWeight.w600,color: Colors.white),),
+              subtitle: Text(l2[3],style: TextStyle(fontWeight: FontWeight.w400,color: Colors.white),),
+              trailing: IconButton(
+                onPressed: (){},
+                icon: Icon(Icons.add,color: Colors.white,),
+                iconSize: 20
+                ,
+              ),
+            ),
+            ListTile(
+              leading: CircleAvatar(
+                backgroundImage: AssetImage('https://www.vhv.rs/dpng/d/426-4263064_circle-avatar-png-picture-circle-avatar-image-png.png'),
+                backgroundColor: Colors.teal,
+                radius: 25,
+              ),
+              title: Text(l1[4],style: TextStyle(fontWeight: FontWeight.w600,color: Colors.white),),
+              subtitle: Text(l2[4],style: TextStyle(fontWeight: FontWeight.w400,color: Colors.white),),
+              trailing: IconButton(
+                onPressed: (){},
+                icon: Icon(Icons.add,color: Colors.white,),
+                iconSize: 20
+                ,
+              ),
+            ),
+            ListTile(
+              leading: CircleAvatar(
+                backgroundImage: AssetImage('https://www.vhv.rs/dpng/d/426-4263064_circle-avatar-png-picture-circle-avatar-image-png.png'),
+                backgroundColor: Colors.teal,
+                radius: 25,
+                child: Text(l1[5],style: TextStyle(fontSize: 10),),
+              ),
+              title: Text(l1[5],style: TextStyle(fontWeight: FontWeight.w600,color: Colors.white),),
+              subtitle: Text(l2[5],style: TextStyle(fontWeight: FontWeight.w400,color: Colors.white),),
+              trailing: IconButton(
+                onPressed: (){},
+                icon: Icon(Icons.add,color: Colors.white,),
+                iconSize: 20
+                ,
+              ),
+            ),
+
+
+          ],
+        ),
+      ),
+    );
+  }
+}

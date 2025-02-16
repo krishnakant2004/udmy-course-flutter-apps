@@ -1,0 +1,75 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          leading: IconButton(
+            icon: Icon(Icons.menu),
+            onPressed: () {},
+          ),
+          automaticallyImplyLeading: true,
+          title: Text('AppBar Example'),
+          actions: [
+            IconButton(
+              icon: Icon(Icons.search),
+              onPressed: () {},
+            ),
+            IconButton(
+              icon: Icon(Icons.more_vert),
+              onPressed: () {},
+            ),
+          ],
+          flexibleSpace: Container(
+            decoration: BoxDecoration(
+              gradient: LinearGradient(
+                colors: [Colors.blue, Colors.purple],
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight,
+              ),
+            ),
+          ),
+          bottom: PreferredSize(
+            preferredSize: Size.fromHeight(50.0),
+            child: Container(
+              color: Colors.orange,
+              height: 50.0,
+              child: Center(child: Text('Bottom Widget')),
+            ),
+          ),
+          elevation: 4.0,
+          shadowColor: Colors.black,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.vertical(
+              bottom: Radius.circular(30.0),
+            ),
+          ),
+          backgroundColor: Colors.green,
+          foregroundColor: Colors.white,
+          iconTheme: IconThemeData(color: Colors.white),
+          actionsIconTheme: IconThemeData(color: Colors.yellow),
+          primary: true,
+          centerTitle: true,
+          excludeHeaderSemantics: false,
+          titleSpacing: 20.0,
+          toolbarOpacity: 0.8,
+          bottomOpacity: 0.8,
+          toolbarHeight: 70.0,
+          leadingWidth: 100.0,
+          toolbarTextStyle: TextStyle(color: Colors.red, fontSize: 20),
+          titleTextStyle: TextStyle(color: Colors.white, fontSize: 24, fontWeight: FontWeight.bold),
+          //systemOverlayStyle: SystemUiOverlayStyle.light,
+        ),
+        body: Center(
+          child: Text('Hello, World!'),
+        ),
+      ),
+    );
+  }
+}

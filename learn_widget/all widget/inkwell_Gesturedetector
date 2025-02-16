@@ -1,0 +1,74 @@
+
+In Flutter, both GestureDetector and InkWell are widgets that can be used to detect gestures,
+such as taps, drags, and long presses. However, they have different use cases and properties.
+ Here's a comparison to help you understand the differences and when to use each:
+
+
+//import 'dart:html';
+
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatefulWidget {
+  const MyApp({super.key});
+
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  Color con_color=Colors.white;
+  Color h_color=Colors.blue;
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('T E S T'),
+          titleTextStyle: TextStyle(
+            fontSize: 25,
+            fontWeight: FontWeight.bold,
+            color: Color(0xFF62B2E8),
+          ),
+          centerTitle: true,
+        ),
+        body: InkWell(
+          onTap: (){
+            setState(() {
+              if(con_color==Colors.white){
+                con_color=Colors.black;
+              }else{
+                con_color=Colors.white;
+              }
+            });
+          },
+          child: Container(
+            height: 300,
+            width: 300,
+            color:con_color,
+            child: Center(
+              child: GestureDetector(
+                onTap: (){
+                  setState(() {
+                    if(h_color==Colors.blue){
+                      h_color=Colors.teal;
+                    }else{
+                      h_color=Colors.blue;
+                    }
+                  });
+                },
+                child: Text(
+                  'hello',
+                  style: TextStyle(fontSize: 25, color: h_color),
+                ),
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
